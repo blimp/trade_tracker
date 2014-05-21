@@ -49,9 +49,9 @@ class MyFancyConversionPageController < ApplicationController
   def my_fancy_action
     # Refer to the TradeTracker documentation to see which params are available.
     set_conversion_image_parameters(
-      conversion_type: 'sales'
-      transaction_id: 1234, # Typically, a unique reference to what was sold
-      price: 1337, # Only numbers here
+      conversion_type: 'sales',
+      transaction_id: 1234,
+      price: 1337,
       merchant_description: "Describe what you sold (IDs/names/...)",
       email: 'customer@bought.it',
     )
