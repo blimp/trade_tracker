@@ -1,5 +1,6 @@
+require 'active_support/dependencies'
 require "trade_tracker/version"
 
 module TradeTracker
-  # Your code goes here...
+  include ActiveSupport::Dependencies
 end
