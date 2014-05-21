@@ -47,12 +47,13 @@ class MyFancyConversionPageController < ApplicationController
   include TradeTracker::Concerns::Conversion
 
   def my_fancy_action
+    # Refer to the TradeTracker documentation to see which params are available.
     set_conversion_image_parameters(
-      transaction_id: @order_id,
-      price: @total_price,
-      merchant_description: "#{@configuration.id}-#{@property.name}",
-      email: session[:booking_email],
       conversion_type: 'sales'
+      transaction_id: 1234, # Typically, a unique reference to what was sold
+      price: 1337, # Only numbers here
+      merchant_description: "Describe what you sold (IDs/names/...)",
+      email: 'customer@bought.it',
     )
   end
 end
