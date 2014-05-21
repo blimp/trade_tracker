@@ -11,10 +11,13 @@ Add this line to your application's Gemfile:
 
     gem 'trade_tracker', git: 'git@github.com:blimp/trade_tracker.git', branch: :master
 
-And then execute:
+Then execute:
 
     $ bundle
-    $ 
+
+And finally, generate your configuration file:
+
+    $ rails g trade_tracker:config
 
 ## Usage
 

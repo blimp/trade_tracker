@@ -1,0 +1,10 @@
+production: &production
+  campaign_id: 'You receive this from TradeTracker'
+  product_id: 'You receive this from TradeTracker'
+
+development:
+  <<: *production
+
+test:
+  <<: *production
+
