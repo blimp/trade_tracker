@@ -1,5 +1,5 @@
-module Concerns
-  module TradeTracker
+module TradeTracker
+  module Concerns
     module Conversion
       extend ActiveSupport::Concern
       attr_reader :conversion_image_parameters

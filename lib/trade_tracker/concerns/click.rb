@@ -1,5 +1,5 @@
-module Concerns
-  module TradeTracker
+module TradeTracker
+  module Concerns
     module Click
       extend ActiveSupport::Concern
 
