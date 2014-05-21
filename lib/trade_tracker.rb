@@ -6,3 +6,5 @@ require 'trade_tracker/conversion'
 module TradeTracker
   include ActiveSupport::Dependencies
 end
+
+require "trade_tracker/railtie"
