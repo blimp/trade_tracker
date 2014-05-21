@@ -1,4 +1,4 @@
-# TradeTracker
+# TradeTracker on Rails
 
 This gem is for you if you're looking to integrate TradeTracker click/conversion tracking into your Rails app.
 
