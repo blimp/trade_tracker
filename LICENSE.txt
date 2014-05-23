@@ -1,4 +1,4 @@
-Copyright (c) 2014 davelens
+Copyright (c) 2014 Blimp
 
 MIT License
 
