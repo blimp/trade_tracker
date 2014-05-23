@@ -9,7 +9,7 @@ Refer to the official documentation if you have questions on the click/conversio
 
 Add this line to your application's Gemfile:
 
-    gem 'trade-tracker-rails', github: 'blimp/trade-tracker-rails', branch: :master
+    gem 'trade_tracker', github: 'blimp/trade_tracker', branch: :master
 
 Then execute:
 
