@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'trade_tracker/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'trade_tracker'
+  spec.name          = 'trade-tracker-rails'
   spec.version       = TradeTracker::VERSION
   spec.authors       = ['Dave Lens']
   spec.email         = ['dave@blimp.be']

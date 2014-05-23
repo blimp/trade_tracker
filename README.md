@@ -2,14 +2,14 @@
 
 This gem is for you if you're looking to integrate TradeTracker click/conversion tracking into your Rails app.
 
-This assumes basic knowledge of the TradeTracker tool.  
+This assumes basic knowledge of the TradeTracker tool.
 Refer to the official documentation if you have questions on the click/conversion process.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'trade_tracker', git: 'git@github.com:blimp/trade_tracker.git', branch: :master
+    gem 'trade-tracker-rails', github: 'blimp/trade-tracker-rails', branch: :master
 
 Then execute:
 
