@@ -24,8 +24,9 @@ And finally, generate your configuration file:
 ### 1. Setup two routes
 ```ruby
   get 'my_click_page' => 'tradetracker#index'
-  get 'my_conversion_page' => 'tradetracker#conversion'
+  get 'my_conversion_page' => 'tradetracker#conversion', as: :tradetracker_conversion
 ```
+Name the second route "tradetracker_conversion" (see example above), as it is used by the gem to lookup the path to the conversion pixel.
 ### 2. Create a basic controller (or map to your own)
 ```ruby
 class TradetrackerController < ApplicationController
