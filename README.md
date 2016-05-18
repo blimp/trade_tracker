@@ -62,7 +62,7 @@ class MyFancyConversionPageController < ApplicationController
   end
 end
 ```
-```ruby
+```erb
 # app/views/my_fancy_action.html.erb
 <%= conversion_image_tag %>
 ```
