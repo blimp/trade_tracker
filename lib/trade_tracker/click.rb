@@ -1,3 +1,5 @@
+require 'digest/md5'
+
 module TradeTracker
   class Click
     attr_reader :campaign_id, :material_id, :affiliate_id, :reference,
