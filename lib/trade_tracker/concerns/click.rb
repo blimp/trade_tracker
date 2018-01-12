@@ -3,9 +3,9 @@ module TradeTracker
     module Click
       extend ActiveSupport::Concern
 
-      def send_click_to_tradetracker
+      def send_click_to_tradetracker(redirect_options = {})
         if tradetracker_click.trackback_url
-          redirect_to tradetracker_click.trackback_url
+          redirect_to tradetracker_click.trackback_url, redirect_options
         else
           redirect_to root_path
         end
