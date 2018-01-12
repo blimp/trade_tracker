@@ -6,8 +6,8 @@ require 'trade_tracker/version'
 Gem::Specification.new do |spec|
   spec.name          = 'trade_tracker'
   spec.version       = TradeTracker::VERSION
-  spec.authors       = ['Dave Lens']
-  spec.email         = ['dave@blimp.be']
+  spec.authors       = ['Dave Lens', 'Davy Hellemans']
+  spec.email         = ['dave@blimp.be', 'rubygems@bauffman.be']
   spec.summary       = %q{This Rails gem wants to make the implementation of TradeTracker (click + conversion logging) easier.}
   spec.description   = ''
   spec.homepage      = ''
