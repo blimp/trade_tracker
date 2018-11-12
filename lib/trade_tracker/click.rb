@@ -44,7 +44,7 @@ module TradeTracker
 
     def trackback_url
       if campaign_id.present? || affiliate_id.present?
-        "http://tc.tradetracker.net/?c=#{campaign_id}&m=#{material_id}&a=#{affiliate_id}&r=#{reference}&u=#{redirect_url}"
+        "https://tc.tradetracker.net/?c=#{campaign_id}&m=#{material_id}&a=#{affiliate_id}&r=#{reference}&u=#{redirect_url}"
       end
     end
 

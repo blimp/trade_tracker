@@ -81,7 +81,7 @@ describe TradeTracker::Click do
   end
 
   it '#trackback_url' do
-    expect(subject.trackback_url).to eq 'http://tc.tradetracker.net/?c=14986&m=0&a=18897&r=&u='
+    expect(subject.trackback_url).to eq 'https://tc.tradetracker.net/?c=14986&m=0&a=18897&r=&u='
   end
 
   it '#respond_to?' do
