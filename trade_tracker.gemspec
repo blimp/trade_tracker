@@ -9,8 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Dave Lens', 'Davy Hellemans']
   spec.email         = ['dave@blimp.be', 'rubygems@bauffman.be']
   spec.summary       = %q{This Rails gem wants to make the implementation of TradeTracker (click + conversion logging) easier.}
-  spec.description   = ''
-  spec.homepage      = ''
+  spec.homepage      = 'https://rubygems.org/gems/trade_tracker'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -19,8 +18,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'bundler', '~> 1.6'
-  spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'rake', '~> 0'
   spec.add_development_dependency 'rspec', '~> 2.6'
 
-  spec.add_dependency 'activesupport', '>= 3.2'
+  spec.add_dependency 'activesupport', '~> 3.2'
 end
