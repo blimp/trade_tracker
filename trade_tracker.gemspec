@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Dave Lens', 'Davy Hellemans']
   spec.email         = ['dave@blimp.be', 'rubygems@bauffman.be']
   spec.summary       = %q{This Rails gem wants to make the implementation of TradeTracker (click + conversion logging) easier.}
-  spec.homepage      = 'https://rubygems.org/gems/trade_tracker'
+  spec.homepage      = 'https://github.com/blimp/trade_tracker'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
