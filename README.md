@@ -2,7 +2,14 @@
 
 This gem is for you if you're looking to integrate TradeTracker click/conversion tracking into your Rails app.
 
-This assumes basic knowledge of the TradeTracker tool.
+TradeTracker has two functionalities: click and conversion. 
+
+- Click - give info to tradetracker from what affiliate just got redirected. 
+To have this functionality, you only need to put route in routes and after that only inform staff from trade tracker site.
+
+- Conversion - give info to tradetracker about product purchased. To have this functionality, you need to put helper method inside thank-you page or after-purchase view. 
+After that a little image (1px to 1px) will be created. Instead of showing something using url, it will send info to tradetracker about products using this url. 
+
 Refer to the official documentation if you have questions on the click/conversion process.
 
 ## Installation
@@ -24,7 +31,6 @@ And finally, generate your configuration file:
 ### 1. Setup two routes
 ```ruby
   get 'my_click_page' => 'tradetracker#index'
-  get 'my_conversion_page' => 'tradetracker#conversion', as: :tradetracker_conversion
 ```
 Name the second route "tradetracker_conversion" (see example above), as it is used by the gem to lookup the path to the conversion pixel.
 ### 2. Create a basic controller (or map to your own)
@@ -38,24 +44,18 @@ class TradetrackerController < ApplicationController
     set_cookies # Stores the required cookie hash so TT knows we're legit.
     send_click_to_tradetracker # Redirects to TTs trackback URL, and back to your redirect URL.
   end
-
-  def conversion
-    send_conversion_to_tradetracker # Redirects to TTs trackback_URL
-  end
 end
 ```
-### 3. Add the conversion image tag
+### 3. Add the helper method with function conversion_image_tag inside
 ```ruby
-# app/controllers/my_fancy_conversion_page_controller.rb:
-class MyFancyConversionPageController < ApplicationController
-  include TradeTracker::Concerns::Conversion
+# app/controllers/whatever_controller_you_want.rb:
+class WhateverControllerYouWantController < ApplicationController
+  helper_method :conversion_tag
 
-  def my_fancy_action
+  def conversion_tag
     # Refer to the TradeTracker documentation to see which params are available.
     set_conversion_image_parameters(
       conversion_type: 'sales',
-      transaction_id: 1234,
-      price: 1337,
       merchant_description: "Describe what you sold (IDs/names/...)",
       email: 'customer@bought.it',
     )
